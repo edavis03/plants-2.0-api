@@ -21,7 +21,7 @@ spec:
         apps.tanzu.vmware.com/pipeline: test-java
   source:
     git:
-      url: <https URL for your generated project's Git repository>
+      url: https://github.com/edavis03/plants-2.0-api.git
       ref:
         branch: main
   serviceClaims:
