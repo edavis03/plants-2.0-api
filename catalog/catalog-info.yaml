@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: plants-2.0-api
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=plants-2.0-api"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
+  providesApis:
+    - plants-2.0-api
