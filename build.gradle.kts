@@ -24,7 +24,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
 
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-api:${springdocVersion}")
+    implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
 
     // Infrastructure
     implementation("org.flywaydb:flyway-core")
