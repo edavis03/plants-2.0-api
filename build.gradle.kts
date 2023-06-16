@@ -9,7 +9,7 @@ group = "plants"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
-val springdocVersion = "2.0.2"
+val springdocVersion = "2.0.4"
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
 
-    implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:$springdocVersion")
 
     // Infrastructure
     implementation("org.flywaydb:flyway-core")
