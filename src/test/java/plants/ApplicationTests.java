@@ -77,9 +77,9 @@ class ApplicationTests {
     }
 
     @Test
-    void shouldExposeOpenAPIEndpoint() {
+    void shouldExposeSwaggerEndpoint() {
 
-        var responseEntity = restTemplate.getForEntity("/api-docs", String.class);
+        var responseEntity = restTemplate.getForEntity("/swagger-ui.html", String.class);
 
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
