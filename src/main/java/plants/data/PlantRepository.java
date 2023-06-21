@@ -4,5 +4,5 @@ import org.springframework.data.repository.ListCrudRepository;
 
 import java.util.UUID;
 
-public interface PlantEntityRepository extends ListCrudRepository<PlantEntity, UUID> {
+public interface PlantRepository extends ListCrudRepository<PlantEntity, UUID> {
 }

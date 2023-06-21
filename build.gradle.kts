@@ -10,12 +10,15 @@ version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 val springdocVersion = "2.0.4"
+val lombokVersion = "1.18.26"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation("org.projectlombok:lombok:$lombokVersion")
+    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
     runtimeOnly("org.postgresql:postgresql")
     implementation("com.h2database:h2")
     // Spring
@@ -32,6 +35,7 @@ dependencies {
 
     // Test
     testImplementation ("org.springframework.boot:spring-boot-starter-test")
+    testImplementation ("org.instancio:instancio-junit:2.16.0"  )
 }
 
 tasks.withType<Test> {
