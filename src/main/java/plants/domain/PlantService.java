@@ -25,5 +25,21 @@ public class PlantService {
 
         return plants;
     }
+
+    public Plant savePlant(Plant plant) {
+        var plantEntity = PlantEntity.builder()
+                .name(plant.name())
+                .build();
+        PlantEntity savedEntity = plantRepo.save(plantEntity);
+        return convertPlantEntityToPlant(savedEntity);
+    }
+
+    private Plant convertPlantEntityToPlant(PlantEntity entity) {
+        return Plant.builder()
+                .id(entity.getId())
+                .name(entity.getName())
+                .build();
+    }
+
 }
 

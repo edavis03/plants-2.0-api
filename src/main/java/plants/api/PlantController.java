@@ -1,8 +1,6 @@
 package plants.api;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import plants.domain.Plant;
 import plants.domain.PlantService;
 
@@ -21,6 +19,12 @@ public class PlantController {
     @GetMapping("")
     List<Plant> getAllPlants() {
         return plantService.getAllPlants();
+    }
+
+    @PostMapping("")
+    Plant savePlant(@RequestBody Plant plant) {
+        var savedPlant = plantService.savePlant(plant);
+        return savedPlant;
     }
 }
 

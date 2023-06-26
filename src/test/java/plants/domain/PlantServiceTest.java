@@ -4,6 +4,7 @@ import org.instancio.Instancio;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import plants.data.PlantEntity;
@@ -13,7 +14,11 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.instancio.Select.field;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -34,19 +39,35 @@ class PlantServiceTest {
 
         var returnedPlants = plantService.getAllPlants();
 
-        assertPlantEntityListEqualsSavedPlantList(plantEntities, returnedPlants);
+        assertPlantEntityListEqualsPlantList(plantEntities, returnedPlants);
     }
 
-    private void assertPlantEntityListEqualsSavedPlantList(List<PlantEntity> plantEntities, List<Plant> plants) {
+    @Test
+    void savePlant_shouldReturnSavedPlant() {
+        var plantToSave = Instancio.of(Plant.class).set(field(Plant::id), null).create();
+        var mockReturnedPlantEntity = Instancio.of(PlantEntity.class).create();
+
+        var captor = ArgumentCaptor.forClass(PlantEntity.class);
+
+        when(mockPlantRepo.save(any(PlantEntity.class))).thenReturn(mockReturnedPlantEntity);
+
+        var savedPlant = plantService.savePlant(plantToSave);
+        verify(mockPlantRepo).save(captor.capture());
+
+        assertPlantEntityEqualsPlant(mockReturnedPlantEntity, savedPlant);
+        assertThat(captor.getValue().getName()).isEqualTo(plantToSave.name());
+    }
+
+    private void assertPlantEntityListEqualsPlantList(List<PlantEntity> plantEntities, List<Plant> plants) {
         var plantEntitiesMap = plantEntities.stream().collect(Collectors.toMap(PlantEntity::getId, Function.identity()));
         var plantsMap = plants.stream().collect(Collectors.toMap(Plant::id, Function.identity()));
 
         for (var entry : plantEntitiesMap.entrySet()) {
-            assertPlantEntityEqualsSavedPlant(entry.getValue(), plantsMap.get(entry.getKey()));
+            assertPlantEntityEqualsPlant(entry.getValue(), plantsMap.get(entry.getKey()));
         }
     }
 
-    private void assertPlantEntityEqualsSavedPlant(PlantEntity plantEntity, Plant plant) {
+    private void assertPlantEntityEqualsPlant(PlantEntity plantEntity, Plant plant) {
         assertEquals(plantEntity.getId(), plant.id());
         assertEquals(plantEntity.getName(), plant.name());
     }
