@@ -1,6 +1,7 @@
 package plants.api;
 
 import org.springframework.web.bind.annotation.*;
+import plants.domain.InvalidPlantException;
 import plants.domain.Plant;
 import plants.domain.PlantService;
 
@@ -17,12 +18,12 @@ public class PlantController {
     }
 
     @GetMapping("")
-    List<Plant> getAllPlants() {
+    List<Plant> getPlants() {
         return plantService.getAllPlants();
     }
 
     @PostMapping("")
-    Plant savePlant(@RequestBody Plant plant) {
+    Plant postPlant(@RequestBody Plant plant) throws InvalidPlantException {
         var savedPlant = plantService.savePlant(plant);
         return savedPlant;
     }

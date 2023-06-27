@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.instancio.Select.field;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -43,7 +44,7 @@ class PlantServiceTest {
     }
 
     @Test
-    void savePlant_shouldReturnSavedPlant() {
+    void savePlant_shouldReturnSavedPlant() throws InvalidPlantException {
         var plantToSave = Instancio.of(Plant.class).set(field(Plant::id), null).create();
         var mockReturnedPlantEntity = Instancio.of(PlantEntity.class).create();
 
@@ -56,6 +57,13 @@ class PlantServiceTest {
 
         assertPlantEntityEqualsPlant(mockReturnedPlantEntity, savedPlant);
         assertThat(captor.getValue().getName()).isEqualTo(plantToSave.name());
+    }
+
+    @Test
+    void savePlant_shouldValidateThatPlantHasName() {
+        var invalidPlant = Instancio.of(Plant.class).set(field(Plant::name), null).create();
+
+        assertThrows(InvalidPlantException.class, () -> plantService.savePlant(invalidPlant));
     }
 
     private void assertPlantEntityListEqualsPlantList(List<PlantEntity> plantEntities, List<Plant> plants) {

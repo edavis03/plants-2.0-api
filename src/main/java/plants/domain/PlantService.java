@@ -16,22 +16,29 @@ public class PlantService {
 
     public List<Plant> getAllPlants() {
         var plantEntities = plantRepo.findAll();
-        var plants = plantEntities.stream().map(entity -> {
-            return Plant.builder()
-                    .id(entity.getId())
-                    .name(entity.getName())
-                    .build();
-        }).toList();
+        var plants = plantEntities.stream()
+                .map(entity -> Plant.builder()
+                        .id(entity.getId())
+                        .name(entity.getName())
+                        .build()).toList();
 
         return plants;
     }
 
-    public Plant savePlant(Plant plant) {
+    public Plant savePlant(Plant plant) throws InvalidPlantException {
+        validatePlant(plant);
+
         var plantEntity = PlantEntity.builder()
                 .name(plant.name())
                 .build();
         PlantEntity savedEntity = plantRepo.save(plantEntity);
         return convertPlantEntityToPlant(savedEntity);
+    }
+
+    private void validatePlant(Plant plant) throws InvalidPlantException {
+        if (plant.name() == null) {
+            throw new InvalidPlantException();
+        }
     }
 
     private Plant convertPlantEntityToPlant(PlantEntity entity) {
@@ -40,6 +47,5 @@ public class PlantService {
                 .name(entity.getName())
                 .build();
     }
-
 }
 
