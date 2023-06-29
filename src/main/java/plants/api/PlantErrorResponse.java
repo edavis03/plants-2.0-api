@@ -1,4 +1,4 @@
-package plants.data;
+package plants.api;
 
 import lombok.Builder;
 import org.springframework.http.HttpStatus;

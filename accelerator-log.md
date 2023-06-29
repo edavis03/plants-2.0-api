@@ -699,9 +699,9 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/workload.yaml didn't match [src/main/resources/db/migration/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/test-pipeline.yaml didn't match [src/main/resources/db/migration/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [src/main/resources/db/migration/**] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/V1.0__create_customer_profile_table.sql didn't match [src/main/resources/db/migration/**] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/V1.0__create_plant_table.sql didn't match [src/main/resources/db/migration/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/db.changelog-master.xml didn't match [src/main/resources/db/migration/**] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql matched [src/main/resources/db/migration/**] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql matched [src/main/resources/db/migration/**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[0].delegate.transformations[0].sources[1] (Combo)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Combo running as Chain
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[0].delegate.transformations[0].sources[1].delegate (Chain)
@@ -732,9 +732,9 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/workload.yaml didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/test-pipeline.yaml didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [pom.xml] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/V1.0__create_customer_profile_table.sql didn't match [pom.xml] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/V1.0__create_plant_table.sql didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/db.changelog-master.xml didn't match [pom.xml] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [pom.xml] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[0].delegate.transformations[0].sources[1].delegate.transformations[1] (ReplaceText)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗  Info Will replace regex '<dependency>\s+<groupId>org\.liquibase</groupId>\s+<artifactId>liquibase-core</artifactId>\s+</dependency>\s+' with ''
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[0].delegate.transformations[0].sources[1].delegate.transformations[2] (ReplaceText)
@@ -769,9 +769,9 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/workload.yaml didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/test-pipeline.yaml didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [build.gradle.kts] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/V1.0__create_customer_profile_table.sql didn't match [build.gradle.kts] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/V1.0__create_plant_table.sql didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/db.changelog-master.xml didn't match [build.gradle.kts] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [build.gradle.kts] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[0].delegate.transformations[0].sources[2].delegate.transformations[1] (ReplaceText)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗  Info Will replace [    implementation("org.liquibase:liquibase-core")->]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[0].delegate.transformations[0].sources[2].delegate.transformations[2] (ReplaceText)
@@ -806,9 +806,9 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/workload.yaml didn't match [**/application.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/test-pipeline.yaml didn't match [**/application.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [**/application.properties] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/V1.0__create_customer_profile_table.sql didn't match [**/application.properties] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/V1.0__create_plant_table.sql didn't match [**/application.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/changelog/db.changelog-master.xml didn't match [**/application.properties] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [**/application.properties] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [**/application.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ ┗ ╺ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[0].delegate.transformations[0].sources[3].delegate.transformations[1] (OpenRewriteRecipe)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ ╺ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[0].delegate.transformations[1] (UniquePath)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[0].delegate.transformations[0].sources[1] (Combo)
@@ -827,7 +827,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug build.gradle.kts matched [**] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql matched [**] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[1].delegate.transformations[0].sources[1] (InvokeFragment)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Condition (#databaseIntegrationTestType == 'in-memory') evaluated to true
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[6].delegate.transformations[0].sources[0].validated.delegate.transformations[1].delegate.transformations[0].sources[1].validated (Combo)
@@ -844,7 +844,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [pom.xml]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug build.gradle.kts didn't match [pom.xml] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [pom.xml] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application-local.properties didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/test/resources/application-test.properties didn't match [pom.xml] -> excluded
@@ -858,7 +858,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [build.gradle.kts]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug build.gradle.kts matched [build.gradle.kts] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [build.gradle.kts] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application-local.properties didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/test/resources/application-test.properties didn't match [build.gradle.kts] -> excluded
@@ -872,7 +872,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**/src/main/resources/application-local.properties]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties didn't match [**/src/main/resources/application-local.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug build.gradle.kts didn't match [**/src/main/resources/application-local.properties] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [**/src/main/resources/application-local.properties] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [**/src/main/resources/application-local.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [**/src/main/resources/application-local.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application-local.properties matched [**/src/main/resources/application-local.properties] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/test/resources/application-test.properties didn't match [**/src/main/resources/application-local.properties] -> excluded
@@ -894,7 +894,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**/src/test/resources/application-test.properties]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties didn't match [**/src/test/resources/application-test.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug build.gradle.kts didn't match [**/src/test/resources/application-test.properties] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [**/src/test/resources/application-test.properties] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [**/src/test/resources/application-test.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [**/src/test/resources/application-test.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application-local.properties didn't match [**/src/test/resources/application-test.properties] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/test/resources/application-test.properties matched [**/src/test/resources/application-test.properties] -> included
@@ -977,7 +977,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore matched [**] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql matched [**] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileCreateRequest.java matched [**] -> included
@@ -1010,7 +1010,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will exclude [docker-compose.yaml, **/workload.yaml, config/service-operator/postgres.yaml, config/service-operator/postgres-cluster-role.yaml, config/service-operator/postgres-cluster-instance-class.yaml, config/app-operator/postgres-resource-claim.yaml, config/app-operator/postgres-resource-claim-policy.yaml, pom.xml, build.gradle.kts, README.md]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java didn't match [docker-compose.yaml, **/workload.yaml, config/service-operator/postgres.yaml, config/service-operator/postgres-cluster-role.yaml, config/service-operator/postgres-cluster-instance-class.yaml, config/app-operator/postgres-resource-claim.yaml, config/app-operator/postgres-resource-claim-policy.yaml, pom.xml, build.gradle.kts, README.md] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [docker-compose.yaml, **/workload.yaml, config/service-operator/postgres.yaml, config/service-operator/postgres-cluster-role.yaml, config/service-operator/postgres-cluster-instance-class.yaml, config/app-operator/postgres-resource-claim.yaml, config/app-operator/postgres-resource-claim-policy.yaml, pom.xml, build.gradle.kts, README.md] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [docker-compose.yaml, **/workload.yaml, config/service-operator/postgres.yaml, config/service-operator/postgres-cluster-role.yaml, config/service-operator/postgres-cluster-instance-class.yaml, config/app-operator/postgres-resource-claim.yaml, config/app-operator/postgres-resource-claim-policy.yaml, pom.xml, build.gradle.kts, README.md] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [docker-compose.yaml, **/workload.yaml, config/service-operator/postgres.yaml, config/service-operator/postgres-cluster-role.yaml, config/service-operator/postgres-cluster-instance-class.yaml, config/app-operator/postgres-resource-claim.yaml, config/app-operator/postgres-resource-claim-policy.yaml, pom.xml, build.gradle.kts, README.md] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java didn't match [docker-compose.yaml, **/workload.yaml, config/service-operator/postgres.yaml, config/service-operator/postgres-cluster-role.yaml, config/service-operator/postgres-cluster-instance-class.yaml, config/app-operator/postgres-resource-claim.yaml, config/app-operator/postgres-resource-claim-policy.yaml, pom.xml, build.gradle.kts, README.md] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java didn't match [docker-compose.yaml, **/workload.yaml, config/service-operator/postgres.yaml, config/service-operator/postgres-cluster-role.yaml, config/service-operator/postgres-cluster-instance-class.yaml, config/app-operator/postgres-resource-claim.yaml, config/app-operator/postgres-resource-claim-policy.yaml, pom.xml, build.gradle.kts, README.md] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileCreateRequest.java didn't match [docker-compose.yaml, **/workload.yaml, config/service-operator/postgres.yaml, config/service-operator/postgres-cluster-role.yaml, config/service-operator/postgres-cluster-instance-class.yaml, config/app-operator/postgres-resource-claim.yaml, config/app-operator/postgres-resource-claim-policy.yaml, pom.xml, build.gradle.kts, README.md] -> included
@@ -1047,7 +1047,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [config/service-operator/*.yaml, config/app-operator/*.yaml]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java didn't match [config/service-operator/*.yaml, config/app-operator/*.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [config/service-operator/*.yaml, config/app-operator/*.yaml] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [config/service-operator/*.yaml, config/app-operator/*.yaml] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [config/service-operator/*.yaml, config/app-operator/*.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java didn't match [config/service-operator/*.yaml, config/app-operator/*.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java didn't match [config/service-operator/*.yaml, config/app-operator/*.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileCreateRequest.java didn't match [config/service-operator/*.yaml, config/app-operator/*.yaml] -> excluded
@@ -1086,7 +1086,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [pom.xml]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [pom.xml] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [pom.xml] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileCreateRequest.java didn't match [pom.xml] -> excluded
@@ -1125,7 +1125,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [build.gradle.kts]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [build.gradle.kts] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [build.gradle.kts] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileCreateRequest.java didn't match [build.gradle.kts] -> excluded
@@ -1165,7 +1165,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore matched [**] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql matched [**] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileCreateRequest.java matched [**] -> included
@@ -1192,7 +1192,7 @@
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[7].delegate.transformations[1] (UniquePath)
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java', will use the one appearing first 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path '.gitignore', will use the one appearing first 
-┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/resources/db/migration/V1.0__create_customer_profile_table.sql', will use the one appearing first 
+┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/resources/db/migration/V1.0__create_plant_table.sql', will use the one appearing first 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java', will use the one appearing first 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java', will use the one appearing first 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileCreateRequest.java', will use the one appearing first 
@@ -1240,7 +1240,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/app-operator/postgres-resource-claim.yaml matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore matched [**] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql matched [**] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileCreateRequest.java matched [**] -> included
@@ -1275,7 +1275,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will exclude [**/*.java]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java matched [**/*.java] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [**/*.java] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [**/*.java] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [**/*.java] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [**/*.java] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java matched [**/*.java] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java matched [**/*.java] -> excluded
@@ -1313,7 +1313,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**/*.java]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/api/CustomerProfileControllerTest.java matched [**/*.java] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [**/*.java] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [**/*.java] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [**/*.java] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [**/*.java] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/domain/CustomerProfileServiceTest.java matched [**/*.java] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/vmware/tap/accelerators/restservicedb/ApplicationTests.java matched [**/*.java] -> included
@@ -1369,7 +1369,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**/*.jar]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [**/*.jar] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [**/*.jar] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [**/*.jar] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [**/*.jar] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/plants/domain/CustomerProfileServiceTest.java didn't match [**/*.jar] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/plants/domain/CustomerProfileService.java didn't match [**/*.jar] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties didn't match [**/*.jar] -> excluded
@@ -1405,7 +1405,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will exclude [**/*.jar]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [**/*.jar] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [**/*.jar] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [**/*.jar] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [**/*.jar] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/plants/domain/CustomerProfileServiceTest.java didn't match [**/*.jar] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/plants/domain/CustomerProfileService.java didn't match [**/*.jar] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties didn't match [**/*.jar] -> included
@@ -1448,7 +1448,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ engine.transformations[0].validated.delegate.in.transformations[13].delegate.transformations[0].sources[0].delegate (Include)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml matched [**] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql matched [**] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/plants/domain/CustomerProfileServiceTest.java matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/plants/domain/CustomerProfileService.java matched [**] -> included
@@ -1484,7 +1484,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[13].delegate.transformations[0].sources[1].delegate.transformations[0] (Include)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [pom.xml]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [pom.xml] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [pom.xml] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/plants/domain/CustomerProfileServiceTest.java didn't match [pom.xml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/plants/domain/CustomerProfileService.java didn't match [pom.xml] -> excluded
@@ -1524,7 +1524,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[13].delegate.transformations[0].sources[2].delegate.transformations[0] (Include)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [build.gradle.kts]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [build.gradle.kts] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [build.gradle.kts] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/plants/domain/CustomerProfileServiceTest.java didn't match [build.gradle.kts] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/plants/domain/CustomerProfileService.java didn't match [build.gradle.kts] -> excluded
@@ -1568,7 +1568,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[13].delegate.transformations[0].sources[3].delegate.transformations[0] (Include)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**/*.java]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [**/*.java] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [**/*.java] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [**/*.java] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [**/*.java] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/plants/domain/CustomerProfileServiceTest.java matched [**/*.java] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/plants/domain/CustomerProfileService.java matched [**/*.java] -> included
@@ -1627,7 +1627,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [**]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore matched [**] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql matched [**] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug DATABASE.md matched [**] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-resource-claim-policy.yaml matched [**] -> included
@@ -1673,7 +1673,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [gradlew*, gradle/**]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [gradlew*, gradle/**] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [gradlew*, gradle/**] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.properties didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug DATABASE.md didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-resource-claim-policy.yaml didn't match [gradlew*, gradle/**] -> excluded
@@ -1719,7 +1719,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ engine.transformations[0].validated.delegate.in.transformations[15].delegate.transformations[0].sources[0].delegate (Exclude)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will exclude [DATABASE.md]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [DATABASE.md] -> included
-┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [DATABASE.md] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [DATABASE.md] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [DATABASE.md] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/plants/domain/CustomerProfileServiceTest.java didn't match [DATABASE.md] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug gradle/wrapper/gradle-wrapper.jar didn't match [DATABASE.md] -> included
@@ -1763,7 +1763,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.delegate.in.transformations[15].delegate.transformations[0].sources[2].delegate.transformations[0] (Include)
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃  Info Will include [DATABASE.md]
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug config/service-operator/postgres-cluster-role.yaml didn't match [DATABASE.md] -> excluded
-┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_customer_profile_table.sql didn't match [DATABASE.md] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/db/migration/V1.0__create_plant_table.sql didn't match [DATABASE.md] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitignore didn't match [DATABASE.md] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/test/java/plants/domain/CustomerProfileServiceTest.java didn't match [DATABASE.md] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug gradle/wrapper/gradle-wrapper.jar didn't match [DATABASE.md] -> excluded

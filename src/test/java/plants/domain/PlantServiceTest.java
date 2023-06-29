@@ -7,6 +7,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import plants.data.GenusEntity;
+import plants.data.GenusRepository;
 import plants.data.PlantEntity;
 import plants.data.PlantRepository;
 
@@ -16,8 +18,7 @@ import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.instancio.Select.field;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -26,11 +27,15 @@ import static org.mockito.Mockito.when;
 class PlantServiceTest {
     @Mock
     PlantRepository mockPlantRepo;
+
+    @Mock
+    GenusRepository mockGenusRepo;
+
     PlantService plantService;
 
     @BeforeEach
     void setUp() {
-        plantService = new PlantService(mockPlantRepo);
+        plantService = new PlantService(mockPlantRepo, mockGenusRepo);
     }
 
     @Test
@@ -40,6 +45,7 @@ class PlantServiceTest {
 
         var returnedPlants = plantService.getAllPlants();
 
+        assertNotNull(returnedPlants);
         assertPlantEntityListEqualsPlantList(plantEntities, returnedPlants);
     }
 
@@ -53,9 +59,11 @@ class PlantServiceTest {
         when(mockPlantRepo.save(any(PlantEntity.class))).thenReturn(mockReturnedPlantEntity);
 
         var savedPlant = plantService.savePlant(plantToSave);
-        verify(mockPlantRepo).save(captor.capture());
 
+        assertNotNull(savedPlant);
         assertPlantEntityEqualsPlant(mockReturnedPlantEntity, savedPlant);
+
+        verify(mockPlantRepo).save(captor.capture());
         assertThat(captor.getValue().getName()).isEqualTo(plantToSave.name());
     }
 
@@ -65,6 +73,54 @@ class PlantServiceTest {
 
         assertThrows(InvalidPlantException.class, () -> plantService.savePlant(invalidPlant));
     }
+
+    @Test
+    void getAllGenera_shouldReturnAllGenera() {
+        var genusEntities = Instancio.ofList(GenusEntity.class).size(2).create();
+        when(mockGenusRepo.findAll()).thenReturn(genusEntities);
+
+        var returnedGenera = plantService.getAllGenera();
+
+        assertNotNull(returnedGenera);
+        assertGenusEntityListEqualsGenusList(genusEntities, returnedGenera);
+    }
+
+    @Test
+    void saveGenus_shouldReturnSavedGenus() {
+        var genusToSave = Instancio.of(Genus.class).set(field(Genus::id), null).create();
+        var savedGenusEntity = Instancio.of(GenusEntity.class).create();
+        when(mockGenusRepo.save(any(GenusEntity.class))).thenReturn(savedGenusEntity);
+        var captor = ArgumentCaptor.forClass(GenusEntity.class);
+
+        var returnedGenus = plantService.saveGenus(genusToSave);
+
+        assertNotNull(returnedGenus);
+        assertThatGenusEqualsGenusEntity(returnedGenus, savedGenusEntity);
+
+        verify(mockGenusRepo).save(captor.capture());
+        assertThat(captor.getValue().getId()).isEqualTo(genusToSave.id());
+        assertThat(captor.getValue().getName()).isEqualTo(genusToSave.name());
+    }
+
+    private void assertThatGenusEqualsGenusEntity(Genus domain, GenusEntity entity) {
+        assertEquals(domain.id(), entity.getId());
+        assertEquals(domain.name(), entity.getName());
+    }
+
+    private void assertGenusEntityListEqualsGenusList(List<GenusEntity> genusEntities, List<Genus> returnedGenera) {
+        var entityMap = genusEntities.stream().collect(Collectors.toMap(GenusEntity::getId, Function.identity()));
+        var domainMap = returnedGenera.stream().collect(Collectors.toMap(Genus::id, Function.identity()));
+
+        for (var entry : entityMap.entrySet()) {
+            assertGenusEntityEqualsGenus(entry.getValue(), domainMap.get(entry.getKey()));
+        }
+    }
+
+    private void assertGenusEntityEqualsGenus(GenusEntity entity, Genus domain) {
+        assertEquals(entity.getId(), domain.id());
+        assertEquals(entity.getName(), domain.name());
+    }
+
 
     private void assertPlantEntityListEqualsPlantList(List<PlantEntity> plantEntities, List<Plant> plants) {
         var plantEntitiesMap = plantEntities.stream().collect(Collectors.toMap(PlantEntity::getId, Function.identity()));
