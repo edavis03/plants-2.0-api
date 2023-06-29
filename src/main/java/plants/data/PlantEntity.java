@@ -20,5 +20,8 @@ public class PlantEntity {
     UUID id;
 
     String name;
+
+    @ManyToOne
+    GenusEntity genus;
 }
 

@@ -7,7 +7,6 @@ import plants.data.PlantEntity;
 import plants.data.PlantRepository;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class PlantService {
@@ -47,6 +46,7 @@ public class PlantService {
         return Plant.builder()
                 .id(entity.getId())
                 .name(entity.getName())
+                .genus(convertGenusEntityToGenus(entity.getGenus()))
                 .build();
     }
 
@@ -58,6 +58,9 @@ public class PlantService {
     }
 
     private Genus convertGenusEntityToGenus(GenusEntity entity) {
+        if (entity == null) {
+            return null;
+        }
         return Genus.builder()
                 .id(entity.getId())
                 .name(entity.getName())

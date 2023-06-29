@@ -6,7 +6,8 @@ import java.util.UUID;
 
 public record Plant(
         UUID id,
-        String name
+        String name,
+        Genus genus
 ) {
     @Builder public Plant {}
 }

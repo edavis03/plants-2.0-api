@@ -40,7 +40,7 @@ class PlantServiceTest {
 
     @Test
     void getAllPlants_shouldReturnAllPlants() {
-        var plantEntities = Instancio.ofList(PlantEntity.class).size(2).create();
+        var plantEntities = getPlantEntityList();
         when(mockPlantRepo.findAll()).thenReturn(plantEntities);
 
         var returnedPlants = plantService.getAllPlants();
@@ -117,6 +117,9 @@ class PlantServiceTest {
     }
 
     private void assertGenusEntityEqualsGenus(GenusEntity entity, Genus domain) {
+        if (entity == null && domain == null) {
+            return;
+        }
         assertEquals(entity.getId(), domain.id());
         assertEquals(entity.getName(), domain.name());
     }
@@ -134,5 +137,17 @@ class PlantServiceTest {
     private void assertPlantEntityEqualsPlant(PlantEntity plantEntity, Plant plant) {
         assertEquals(plantEntity.getId(), plant.id());
         assertEquals(plantEntity.getName(), plant.name());
+        assertGenusEntityEqualsGenus(plantEntity.getGenus(), plant.genus());
+    }
+
+    private List<PlantEntity> getPlantEntityList() {
+        var plantEntities = List.of(
+                Instancio.of(PlantEntity.class).create(),
+                Instancio.of(PlantEntity.class).create(),
+                Instancio.of((PlantEntity.class))
+                        .set(field(PlantEntity::getGenus), null)
+                        .create()
+        );
+        return plantEntities;
     }
 }
